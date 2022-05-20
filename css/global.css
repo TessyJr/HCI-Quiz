@@ -1,0 +1,35 @@
+:root {
+  --purple: #8667f2;
+  --white: #ffffff;
+  --blue: #ede7ff;
+  --black: #000000;
+}
+html {
+  background-color: var(--blue);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+  scroll-behavior: smooth;
+}
+
+p {
+  font-family: "Hind", sans-serif;
+}
+
+h1 {
+  font-size: 5rem;
+}
+h2 {
+  font-size: 3rem;
+}
+h3 {
+  font-size: 2rem;
+}
+h4,
+p,
+a {
+  font-size: 1.5rem;
+}
