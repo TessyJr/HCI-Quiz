@@ -66,12 +66,35 @@
   transition: 0.3s;
   color: var(--purple);
 }
+#contact .container .contactForm form div button:active {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1));
+}
+.error {
+  animation: shake 0.2s ease-in-out 0s 2;
+}
 
+/* Media Query */
 @media (max-width: 800px) {
   #contact .container .contactForm {
     width: 100%;
   }
   #contact .container .header h1 {
     font-size: 4rem;
+  }
+}
+
+/* Animation */
+@keyframes shake {
+  0% {
+    margin-left: 0;
+  }
+  25% {
+    margin-left: 4px;
+  }
+  75% {
+    margin-left: -4px;
+  }
+  100% {
+    margin-left: 0;
   }
 }

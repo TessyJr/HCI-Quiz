@@ -6,6 +6,13 @@ function validateName() {
   if (name.value == "" || nameValue.length < 3) {
     name.style.borderColor = "red";
     nameLabel.style.color = "red";
+
+    name.classList.add("error");
+    nameLabel.classList.add("error");
+    setTimeout(() => {
+      name.classList.remove("error");
+      nameLabel.classList.remove("error");
+    }, 500);
   } else {
     name.style.borderColor = "green";
     nameLabel.style.color = "green";
@@ -16,20 +23,20 @@ function validateEmail() {
   let email = document.querySelector("#email");
   let emailValue = email.value;
   let emailLabel = document.querySelector("label[for='email'");
-  let counter = 0;
 
-  for (let i = 0; i < emailValue.length; i++) {
-    if (emailValue[i] == "@") {
-      counter = 1;
-      break;
-    }
-  }
-  if (counter == 0) {
-    email.style.borderColor = "red";
-    emailLabel.style.color = "red";
-  } else {
+  if (emailValue.indexOf("@") != -1 && emailValue.endsWith(".com")) {
     email.style.borderColor = "green";
     emailLabel.style.color = "green";
+  } else {
+    email.style.borderColor = "red";
+    emailLabel.style.color = "red";
+
+    email.classList.add("error");
+    emailLabel.classList.add("error");
+    setTimeout(() => {
+      email.classList.remove("error");
+      emailLabel.classList.remove("error");
+    }, 500);
   }
 }
 
@@ -41,6 +48,13 @@ function validateMessage() {
   if (message.value == "" || messageValue.length < 5) {
     message.style.borderColor = "red";
     messageLabel.style.color = "red";
+
+    message.classList.add("error");
+    messageLabel.classList.add("error");
+    setTimeout(() => {
+      message.classList.remove("error");
+      messageLabel.classList.remove("error");
+    }, 500);
   } else {
     message.style.borderColor = "green";
     messageLabel.style.color = "green";
